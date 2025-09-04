@@ -1,0 +1,50 @@
+<!-- components/item-modal.html -->
+<div id="itemModal"
+  class="fixed inset-0 z-50 hidden modal-backdrop bg-black bg-opacity-50 flex items-center justify-center p-4">
+  <div class="bg-white rounded-xl max-w-md w-full max-h-[90vh] overflow-y-auto">
+    <div class="relative">
+      <button id="closeModal"
+        class="absolute top-4 right-4 bg-white rounded-full w-8 h-8 flex items-center justify-center shadow-md hover:bg-gray-100">
+        ✕
+      </button>
+
+      <!-- Item Image -->
+      <div class="aspect-video bg-gray-200 rounded-t-xl relative overflow-hidden">
+        <img id="modalImage" src="" alt="" class="w-full h-full object-cover" />
+        <div class="absolute bottom-2 left-2 bg-foodpanda-pink text-white px-2 py-1 rounded text-xs">
+          Foodpanda style 🍔
+        </div>
+      </div>
+
+      <!-- Modal Content -->
+      <div class="p-6">
+        <h3 id="modalTitle" class="text-xl font-bold text-gray-900 mb-2"></h3>
+        <div class="flex items-center space-x-2 mb-2">
+          <span id="modalPrice" class="text-lg font-semibold text-foodpanda-pink"></span>
+          <span id="modalOriginalPrice" class="text-sm text-gray-500 line-through"></span>
+        </div>
+        <p id="modalDescription" class="text-gray-600 text-sm mb-6"></p>
+
+        <!-- Quantity -->
+        <div class="flex items-center justify-between mb-6">
+          <div class="flex items-center space-x-3">
+            <button id="decreaseQty"
+              class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center text-gray-600">
+              -
+            </button>
+            <span id="quantity" class="font-semibold">1</span>
+            <button id="increaseQty"
+              class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center text-gray-600">
+              +
+            </button>
+          </div>
+        </div>
+
+        <button id="addToCartButton"
+          class="w-full bg-foodpanda-pink text-white py-3 rounded-lg font-medium hover:bg-gray-600">
+          Add to cart
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

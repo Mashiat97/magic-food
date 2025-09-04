@@ -1,0 +1,98 @@
+<!-- components/cart.html -->
+
+<!-- Cart Section (Desktop) -->
+<div class="hidden lg:block w-80 sticky top-32 h-fit">
+  <div class="bg-white rounded-lg shadow-sm border p-6">
+    <!-- Delivery/Pickup Tabs -->
+    <div class="flex mb-6 bg-gray-100 rounded-lg p-1">
+      <button
+        class="delivery-tab flex-1 px-4 py-2 text-sm font-medium rounded-md bg-white text-gray-900 shadow-sm">
+        Delivery
+      </button>
+      <button
+        class="pickup-tab flex-1 px-4 py-2 text-sm font-medium rounded-md text-gray-600 hover:text-gray-900">
+        Pick-up
+      </button>
+    </div>
+
+    <!-- Cart Content -->
+    <div id="cartContent">
+      <!-- Example Cart Item -->
+      <div class="flex items-start space-x-3 p-3 bg-gray-50 rounded-lg mb-4">
+        <div class="w-12 h-12 bg-gray-200 rounded-lg flex-shrink-0">
+          <img src="https://via.placeholder.com/48" alt="Chicken Chaap"
+            class="w-full h-full object-cover rounded-lg" />
+        </div>
+        <div class="flex-1">
+          <h4 class="font-medium text-sm text-gray-900">Chicken Chaap</h4>
+          <div class="flex items-center space-x-2 mt-1">
+            <span class="text-sm font-semibold text-foodpanda-pink">Tk 153</span>
+            <span class="text-xs text-gray-500 line-through">Tk 180</span>
+          </div>
+        </div>
+        <div class="flex items-center space-x-2">
+          <button class="w-6 h-6 bg-red-100 text-red-600 rounded-full flex items-center justify-center text-xs">
+            ✕
+          </button>
+          <span class="text-sm font-medium">1</span>
+          <button
+            class="w-6 h-6 bg-foodpanda-pink text-white rounded-full flex items-center justify-center text-sm">
+            +
+          </button>
+        </div>
+      </div>
+
+      <!-- Cart Summary -->
+      <div class="border-t pt-4">
+        <div class="flex justify-between text-sm mb-2">
+          <span>Subtotal</span>
+          <span>Tk 153</span>
+        </div>
+        <div class="flex justify-between text-sm mb-4">
+          <span>Service fee</span>
+          <span>Tk 3</span>
+        </div>
+
+        <div class="flex items-center justify-between py-2 border-t border-b mb-4">
+          <span class="text-sm font-medium">Cutlery</span>
+          <input type="checkbox" class="toggle-checkbox" />
+        </div>
+
+        <div class="border-t pt-2">
+          <div class="flex justify-between font-semibold text-lg">
+            <span>Total</span>
+            <span class="text-foodpanda-pink">Tk 156</span>
+          </div>
+        </div>
+        <button
+          class="w-full bg-foodpanda-pink text-white py-3 rounded-lg font-medium mt-4 hover:bg-gray-600">
+          Review payment and address
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Mobile Cart Button -->
+<div class="lg:hidden fixed bottom-4 left-4 right-4 z-50">
+  <button id="mobileCartToggle"
+    class="w-full bg-foodpanda-pink text-white py-3 rounded-lg font-medium shadow-lg">
+    View Cart
+  </button>
+</div>
+
+<!-- Mobile Cart Modal -->
+<div id="mobileCartModal" class="lg:hidden fixed inset-0 z-50 hidden">
+  <div class="absolute inset-0 bg-black bg-opacity-50" id="mobileCartBackdrop"></div>
+  <div class="cart-mobile absolute inset-0 bg-white overflow-y-auto">
+    <div class="p-6">
+      <div class="flex items-center justify-between mb-4">
+        <h3 class="text-lg font-semibold">Your Order</h3>
+        <button id="closeMobileCart" class="text-gray-400 hover:text-gray-600">✕</button>
+      </div>
+      <div id="mobileCartContent">
+        <p class="text-gray-600">Cart is empty</p>
+      </div>
+    </div>
+  </div>
+</div>
